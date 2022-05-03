@@ -66,5 +66,63 @@
       "p3": "Coral Red Lipstick",
       "id": 17
     }
+  ],
+  "similarCategory": [
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "21"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "22"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "23"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "24"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "25"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "26"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "27"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "28"
+    }
   ]
 }
