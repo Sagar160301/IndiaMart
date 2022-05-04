@@ -1,15 +1,16 @@
 {
-	"name": "india-mart-api",
-	"version": "1.0.0",
-	"description": "a simple api for india mart website clone",
-	"main": "index.js",
-	"scripts": {
-		"serve": "nodemon src/index.js"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"express": "^4.18.1",
-		"mongoose": "^6.3.2"
-	}
+  "name": "india-mart-api",
+  "version": "1.0.0",
+  "description": "a simple api for india mart website clone",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon src/server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.2"
+  }
 }
