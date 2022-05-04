@@ -18,7 +18,7 @@ export const ContactUs = () => {
         <div id="col1">
           <div>
             <h2>Our Company</h2>
-            <Link to={""}>About Us</Link>
+            <Link to={"/aboutUs"}>About Us</Link>
             <Link to={""}>Products & Services</Link>
             <Link to={""}>Contact Us</Link>
             <Link to={""}>Sitemap</Link>

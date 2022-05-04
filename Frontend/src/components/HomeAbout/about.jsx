@@ -13,7 +13,7 @@ export const HomeAbout = () => {
         Heaven Cosmetics has been able to experience such an eventful journey
         revolutionizing the Indian decorative <br /> cosmetics industry.
       </p>
-      <Link to={"/"}>
+      <Link to={"/aboutUs"}>
         <h4>+ Read More</h4>
       </Link>
       <AboutOption />
