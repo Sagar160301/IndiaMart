@@ -2,6 +2,7 @@ import StarIcon from "@mui/icons-material/Star";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import LinearProgress from "@mui/material/LinearProgress";
+
 import "./HomeReview.css";
 
 export const HomeReviews = () => {
@@ -25,6 +26,7 @@ export const HomeReviews = () => {
             <LinearProgress
               color="success"
               className="width"
+              // colorScheme="green"
               variant="determinate"
               value={60}
             />

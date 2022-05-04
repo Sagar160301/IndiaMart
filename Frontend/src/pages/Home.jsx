@@ -11,11 +11,6 @@ export const Home = () => {
     <div>
       <HomeAbout />
       <ProductService />
-      <HomeReviews />
-      <ContactUs />
-      <SimilarProduct />
-      <RelatedProduct />
-      <RelatedCategories />
     </div>
   );
 };
