@@ -1,16 +1,21 @@
 
 
 import './App.css'
-import {Makeup} from "./componants/Makeup"
-import {Lipstick} from "./componants/Lipstick"
-import {LipsProducts} from "./componants/Lips_Products"
-import {BleachCream} from "./componants/Bleach_Cream"
+import {Makeup} from "./pages/Makeup"
+import {Lipstick} from "./pages/Lipstick"
+import {LipsProducts} from "./pages/Lips_Products"
+import {BleachCream} from "./pages/Bleach_Cream"
+import {EyeProduct} from "./pages/Eye_Products"
+import {Lipcare} from "./pages/Lipcare"
+import {Scrub} from "./pages/Scrubs."
+
 function App() {
    
 
   return (
     <div className="App">
-   
+     
+ 
        <Makeup/>
         <hr></hr>
         <Lipstick/>
@@ -18,8 +23,12 @@ function App() {
         <LipsProducts/>
         <hr></hr>
         <BleachCream/>
-          
-        
+          <hr></hr>
+          <Scrub/>
+          <hr></hr>
+        <EyeProduct/>
+        <hr></hr>
+        <Lipcare/>
     </div>
   )
 }

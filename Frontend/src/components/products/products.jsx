@@ -1,4 +1,4 @@
-import "./styles/products.css"
+import "./products.css"
 export const Products=({products})=>{
     
     return <div className="allProductsDiv">

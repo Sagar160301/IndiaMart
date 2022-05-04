@@ -1,4 +1,4 @@
-import "./styles/pagesHead.css"
+import "./pagesHead.css"
 
 export const Producthead=({productData})=>{
     return <div className="pageMainDiv">

@@ -1,7 +1,10 @@
-import { Producthead } from "./pagesHead";
-import { Products } from "./products";
+import { Producthead } from "../components/pageshead/pagesHead";
+import { Products } from "../components/products/products";
 import { useState } from "react";
- export const Makeup=()=>{
+import { Sidebar } from "../components/pages_sidebar/pages_sidebar";
+import "./product pages style/product_pages.css"
+
+export const Makeup=()=>{
      const [data,setData]=useState({
          head:"Makeup",
          info:"Offering you a complete choice of products which include Foundation, Compact, Pan Cake Foundation and Pan Stick Foundation.",
@@ -33,8 +36,13 @@ import { useState } from "react";
         ]
      })
 
-     return <div>
+     return <div className="flexDiv">
+          <div className="flexSidebarDiv">
+             <Sidebar/>
+         </div>
+         <div className="flexmainDiv">
          <Producthead productData={data}></Producthead>
          <Products products={data}></Products>
+         </div>
      </div>
  }
