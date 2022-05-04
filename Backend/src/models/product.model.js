@@ -4,7 +4,7 @@ const productSchema = mongoose.Schema({
   name: { type: String, required: true },
   image: { type: String, required: true },
   benefits: { type: Array },
-  type: { type: String, required: true }
+  type: { type: String }
 }, {
   versionKey: false,
   timestamps: true
