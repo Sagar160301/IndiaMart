@@ -9,6 +9,7 @@ const relatedCategoryController = require("./controllers/relatedCategory.control
 const app = express();
 const PORT = 9000;
 
+
 app.use(express.json());
 app.use(cors());
 app.use("/categories", categoryController);
