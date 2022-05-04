@@ -2,9 +2,9 @@
   "name": "india-mart-api",
   "version": "1.0.0",
   "description": "a simple api for india mart website clone",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "server": "nodemon src/server"
+    "server": "nodemon src/index"
   },
   "author": "",
   "license": "ISC",
