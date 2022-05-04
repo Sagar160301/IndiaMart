@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/vali');
+    await mongoose.connect('mongodb+srv://testuser007:testpassword@india-mart-cluster.n3imd.mongodb.net/india-mart?retryWrites=true&w=majority');
   } catch (error) {
     console.log(error);
   }
