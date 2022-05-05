@@ -43,5 +43,9 @@
     margin-left: 8px;
     font-size: 13.5px;
     color:rgb(77, 77, 164);
-    font-family: Arial
+    font-family: Arial;
+    cursor: pointer;
+}
+.singleProductAskPrice:hover{
+    color: rgb(193, 90, 90);;
 }
