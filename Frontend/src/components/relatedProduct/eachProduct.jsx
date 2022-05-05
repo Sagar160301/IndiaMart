@@ -4,7 +4,7 @@ import WifiCalling3Icon from "@mui/icons-material/WifiCalling3";
 
 export const EachProductRelated = ({ el }) => {
   return (
-    <div className="realtedProduct">
+    <div className="realtedProduct" key={el.id}>
       <img src={el.image} alt="" />
       <Link to={"#"}>{el.name}</Link>
       <div>

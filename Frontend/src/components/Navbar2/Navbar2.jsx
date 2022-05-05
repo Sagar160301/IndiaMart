@@ -66,7 +66,7 @@ export const Navbar2 = () => {
             About Us
           </Link>
           {/* <div className="Navbar2first4">Contact Us</div> */}
-          <Link to={"/"} className="Navbar2first4">
+          <Link to={"/contactus"} className="Navbar2first4">
             Contact Us
           </Link>
         </div>
