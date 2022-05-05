@@ -25,12 +25,29 @@ const opencreate=()=>{
 setshow(!show)
 console.log(show)
 }
-const handellogin=()=>{
+const handellogin=async ()=>{
     var phoneno = /^\d{10}$/;
   if((loginform.mobileno.match(phoneno)))
         {
            console.log(loginform)
-           setlerr(false)
+           let res=await fetch("http://localhost:9000/login",{
+            method:"POST",
+            headers:{
+            "content-type":"application/json"
+            },
+            body:JSON.stringify(loginform)
+           });
+           let data=await res.json();
+           console.log(data)
+           if(data.message){
+            setlerr(true)
+            return
+           }
+           else{
+            setlerr(false);
+            return
+           }
+           
         }
       else
         {
@@ -59,7 +76,7 @@ const handelcreateform=(e)=>{
     })
 }
 
-const handlecreate=()=>{
+const handlecreate=async ()=>{
     var phoneno = /^\d{10}$/;
     var pin=/^\d{6}$/
     for(const key in createform){
@@ -68,8 +85,10 @@ const handlecreate=()=>{
                 console.log("empty")
                 return
             }
+            
+        }
         
-        else if(!((createform.mobileno.match(phoneno)) && createform.pincode.match(pin)))
+         if(!((createform.mobileno.match(phoneno)) && createform.pincode.match(pin)))
         {
             console.log("not")
             setlerr(true)
@@ -77,11 +96,29 @@ const handlecreate=()=>{
         }
           else
         {
-       setlerr(false)
-       console.log(createform)
-       return
+            
+            let res=await fetch("http://localhost:9000/register",{
+            method:"POST",
+            headers:{
+            "content-type":"application/json"
+            },
+            body:JSON.stringify(createform)
+           });
+           let data=await res.json();
+           console.log(data)
+           console.log(createform)
+           if(data.message){
+            setlerr(true)
+            return
+           }
+           else{
+            setlerr(false);
+            return
+           }
+       
+       
         }
-    }
+    
        
         
 }
@@ -108,7 +145,7 @@ const handlecreate=()=>{
                                 <input type="number" className="mobile" name="mobileno"  placeholder="Enter Your Mobile Number" onChange={handlelogininput}/>
                             </div>
                             <div className="l-errorbox" style={{display:l_err?"flex":"none"}}>
-                                <span >*Please enter correct mobile number</span>
+                                <span >*Please enter correct mobile number or mobile number not exist</span>
                             </div>
                             <div className="l-submit">
                                 <button id="submit" onClick={handellogin}>Submit</button>
