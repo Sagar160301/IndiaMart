@@ -1,3 +1,4 @@
+import { Carousel } from "../components/carousel/carouseld";
 import { ContactUs } from "../components/contactus/contactUs";
 import { HomeAbout } from "../components/HomeAbout/about";
 import { HomeReviews } from "../components/HomeReview/homeReview";
@@ -9,6 +10,7 @@ import { SimilarProduct } from "../components/similarCatogory/similarCategory";
 export const Home = () => {
   return (
     <div>
+      <Carousel />
       <HomeAbout />
       <ProductService />
     </div>

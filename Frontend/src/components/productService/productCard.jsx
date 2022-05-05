@@ -49,12 +49,12 @@ const ProductSingleCard = styled.div`
 
 export const ProductCard = ({ el }) => {
   return (
-    <ProductSingleCard key={Math.random(10, 100)}>
+    <ProductSingleCard key={el.id}>
       <img src={el.image} alt="" />
       <h2>{el.name}</h2>
-      <p>{el.p1}</p>
-      <p>{el.p2}</p>
-      <p>{el.p3}</p>
+      <p>{el.para1}</p>
+      <p>{el.para2}</p>
+      <p>{el.para3}</p>
       <Link to={"/"}>View Details &gt;</Link>
     </ProductSingleCard>
   );

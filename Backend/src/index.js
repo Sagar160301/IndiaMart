@@ -7,6 +7,7 @@ const productController = require("./controllers/product.controllers");
 const similarCategoryController = require("./controllers/similarCategory.controllers");
 const relatedProductController = require("./controllers/relatedProduct.controller");
 const relatedCategoryController = require("./controllers/relatedCategory.controller");
+const productServiceController = require("./controllers/productService.controllers");
 
 const app = express();
 const PORT = 9000;
@@ -21,6 +22,7 @@ app.use("/categories", categoryController);
 app.use("/similarCategory", similarCategoryController);
 app.use("/relatedProduct", relatedProductController);
 app.use("/relatedCategory", relatedCategoryController);
+app.use("/proudctService", productServiceController);
 
 connectDB();
 

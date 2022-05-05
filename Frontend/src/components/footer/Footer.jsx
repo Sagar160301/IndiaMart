@@ -1,12 +1,12 @@
-import React from 'react'
-import "./Footer.css"
-import AppleIcon from '@mui/icons-material/Apple';
-import Shop2Icon from '@mui/icons-material/Shop2';
-import TabletMacIcon from '@mui/icons-material/TabletMac';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-const Footer = () => {
+import React from "react";
+import "./Footer.css";
+import AppleIcon from "@mui/icons-material/Apple";
+import Shop2Icon from "@mui/icons-material/Shop2";
+import TabletMacIcon from "@mui/icons-material/TabletMac";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+export const Footer = () => {
   return (
     <div>
       <div className="footer">
@@ -16,13 +16,13 @@ const Footer = () => {
           </div>
           <div>
             <h5>Go mobile:</h5>
-              <AppleIcon/>
-              <Shop2Icon/>
-              <TabletMacIcon/>
+            <AppleIcon />
+            <Shop2Icon />
+            <TabletMacIcon />
             <h5>Follow us on:</h5>
-            <FacebookIcon/>
-            <TwitterIcon/>
-            <LinkedInIcon/>
+            <FacebookIcon />
+            <TwitterIcon />
+            <LinkedInIcon />
           </div>
         </div>
         <div className="lastfooter">
@@ -63,15 +63,17 @@ const Footer = () => {
         </div>
         {/* <hr/> */}
         <div className="endpage">
-            <hr></hr>
+          <hr></hr>
           <div className="lastFooter">
-              <p className="Firstlast1">Copyright © 1996-2022 IndiaMART InterMESH Ltd. All rights reserved</p>
-              <p className="Firstlast2">Terms of Use-Privacy Policy - Link to Us</p>
+            <p className="Firstlast1">
+              Copyright © 1996-2022 IndiaMART InterMESH Ltd. All rights reserved
+            </p>
+            <p className="Firstlast2">
+              Terms of Use-Privacy Policy - Link to Us
+            </p>
           </div>
         </div>
       </div>
     </div>
-  )
-}
-
-export default Footer
+  );
+};

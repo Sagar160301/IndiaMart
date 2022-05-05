@@ -1,0 +1,43 @@
+#carousel {
+  margin: 20px auto;
+  width: 90%;
+  padding-top: 30px;
+}
+#carousel img {
+  width: 100%;
+}
+
+#carousel .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  border: 1px solid rgb(223, 219, 219);
+}
+#carousel .caro {
+  position: absolute;
+  background-color: rgb(93, 78, 78);
+  bottom: -43px;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  transition: bottom 0.3s linear 0s;
+}
+#carousel .caro button {
+  border: none;
+  background-color: white;
+  padding: 5px 9px;
+  border-radius: 6px;
+  color: teal;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#carousel .item:hover .caro {
+  bottom: 0px;
+}

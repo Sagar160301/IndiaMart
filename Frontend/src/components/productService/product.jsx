@@ -12,7 +12,7 @@ export const ProductService = () => {
 
   const getData = async () => {
     try {
-      let res = await fetch("http://localhost:8080/productService");
+      let res = await fetch("http://localhost:9000/proudctService");
       let allData = await res.json();
       setData(allData);
     } catch (error) {
