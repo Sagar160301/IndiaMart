@@ -3,54 +3,40 @@ import { useState } from "react"
 import  up from "./up.png"
 import down from "./down.png"
 export const Sidebar=()=>{
-    const [sidebar,setSidebar]=useState({
-        Makeup:false,
-        Lipstick:false,
-        LipsProducts:false,
-        BleachCream:false,
-        Scrubs:false,
-        EyesProducts:false,
-        LipCare:false,
-        TraditionalItems:false
-
-    })
+    const [sidebar,setSidebar]=useState({ Makeup:false,Lipstick:false,LipsProducts:false,BleachCream:false,Scrubs:false,EyesProducts:false,LipCare:false,TraditionalItems:false})
     const updateSidebar=(data)=>{
-       console.log(data.id)
-        setSidebar({
+      setSidebar({
             ...sidebar,
             [data.id]:!sidebar[data.id]
         })
     }
-    console.log(sidebar)
-    return <div className="sidebarDiv">
+return <div className="sidebarDiv">
          <div className="sidebarHead">Products & Services</div>
   
-       <div  id="Makeup" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
-            <div className="sidebarDivs">
-            <div>
-                   <p className="sidebarPageHead">Makeup</p> 
-                  {sidebar.Makeup===false ? <p className="sidebarAvailable">4 products available</p>:null}
-            </div> 
-                  {sidebar.Makeup===true ? <img id="Makeup"  className="selectImg" src={up}/>:<img id="Makeup" className="selectImg" src={down}/>}
-            </div>
-            {sidebar.Makeup===true ? <div className="categoryDiv">
+            <div  id="Makeup" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
+                <div className="sidebarDivs">
+                    <div>
+                         <p className="sidebarPageHead">Makeup</p> 
+                         {sidebar.Makeup===false ? <p className="sidebarAvailable">4 products available</p>:null}
+                   </div> 
+                     {sidebar.Makeup===true ? <img id="Makeup"  className="selectImg" src={up}/>:<img id="Makeup" className="selectImg" src={down}/>}
+               </div>
+                     {sidebar.Makeup===true ? <div className="categoryDiv">
                                                <p>Foundation</p>
                                                <p>Compact</p>
                                                <p>Pan Cake Foundation</p>
                                                <p>Pan Stick Foundation</p>
                                     </div>:null}
-       </div>
-       
-
-            <div  id="Lipstick" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
-            <div className="sidebarDivs">
-            <div>
-                <p className="sidebarPageHead">Lipstick</p> 
-                {sidebar.Lipstick===false ?<p className="sidebarAvailable">9 products available</p>:null}
-            </div> 
-            {sidebar.Lipstick===true ? <img id="Lipstick"  className="selectImg" src={up}/>:<img id="Lipstick" className="selectImg" src={down}/>}
-            </div>
-            {sidebar.Lipstick===true ? <div className="categoryDiv">
+          </div>
+          <div  id="Lipstick" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
+               <div className="sidebarDivs">
+                  <div>
+                          <p className="sidebarPageHead">Lipstick</p> 
+                          {sidebar.Lipstick===false ?<p className="sidebarAvailable">9 products available</p>:null}
+                  </div> 
+                      {sidebar.Lipstick===true ? <img id="Lipstick"  className="selectImg" src={up}/>:<img id="Lipstick" className="selectImg" src={down}/>}
+               </div>
+                     {sidebar.Lipstick===true ? <div className="categoryDiv">
                                             <p>Cerise Pink Lipstick</p>
                                             <p>Coral Red Lipstick</p>
                                             <p>Desert Rose Lipstick</p>
@@ -59,11 +45,9 @@ export const Sidebar=()=>{
                                             <p>Pretty Purple Lipstick</p>
                                             <p>Radient Red Lipstick</p>
                                             <p>Baked Brick Lipstick</p> 
-           
-                                        </div>:null}
+                                            </div>:null}
             </div>
-       
-            <div  id="LipsProducts" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
+        <div  id="LipsProducts" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
             <div className="sidebarDivs">
             <div>
                 <p className="sidebarPageHead">Lips Products</p> 
