@@ -1,0 +1,84 @@
+#similarCategorySection {
+  width: 90%;
+  margin: 30px auto;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+#similarCategory {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 10px;
+}
+#similarCategorySection h1 {
+  text-align: left;
+}
+#SimilarEachProduct {
+  background-color: #f6f6f6;
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  padding: 7px 2px;
+  padding-bottom: 40px;
+}
+
+#SimilarEachProduct img {
+  width: 100%;
+}
+
+#SimilarEachProduct a {
+  text-decoration: none;
+}
+#SimilarEachProduct a:hover {
+  color: red;
+}
+
+#SimilarEachProduct button {
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border: none;
+  background: none;
+  background-color: #00a699;
+  border-radius: 30%;
+  margin: 10px 0px;
+}
+
+#similarCategorySection #form {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 49%;
+  margin: 50px auto;
+
+  padding: 5%;
+}
+#similarCategorySection #form form {
+  width: 100%;
+  /* text-align: left; */
+}
+#similarCategorySection #form h3 {
+  color: blue;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
+#similarCategorySection .form {
+  justify-content: space-between;
+}
+#similarCategorySection .form input {
+  padding: 10px;
+}
+.btn {
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  background-color: #00a699;
+  font-weight: bold;
+  margin: 10px 0px;
+}

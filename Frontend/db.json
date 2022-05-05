@@ -66,5 +66,139 @@
       "p3": "Coral Red Lipstick",
       "id": 17
     }
+  ],
+  "similarCategory": [
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "21"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "22"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "23"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "24"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "25"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "26"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "27"
+    },
+    {
+      "image": "https://5.imimg.com/data5/ECOM/Default/2022/4/YP/JQ/ES/112041886/jpg-20220424-122355-0000-500x500.jpg",
+      "name": "Natural and Chemical Free",
+      "price": 450,
+      "desc": "Mavashivaa - Golden Traders",
+      "id": "28"
+    }
+  ],
+  "relatedCategory": [
+    {
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/1/IB/TX/TW/52181736/miss-rose-pink-lipstick-250x250.jpeg",
+      "name": "Miss Rose Pink Lipstick",
+      "price": 55,
+      "brand": "Cosmetic World",
+      "location": "New Delhi, Delhi, India",
+      "mobile": "Call 07942554198"
+    },
+    {
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/1/IB/TX/TW/52181736/miss-rose-pink-lipstick-250x250.jpeg",
+      "name": "Miss Rose Pink Lipstick",
+      "price": 55,
+      "brand": "Cosmetic World",
+      "location": "New Delhi, Delhi, India",
+      "mobile": "Call 07942554198"
+    },
+    {
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/1/IB/TX/TW/52181736/miss-rose-pink-lipstick-250x250.jpeg",
+      "name": "Miss Rose Pink Lipstick",
+      "price": 55,
+      "brand": "Cosmetic World",
+      "location": "New Delhi, Delhi, India",
+      "mobile": "Call 07942554198"
+    },
+    {
+      "image": "https://5.imimg.com/data5/SELLER/Default/2022/1/IB/TX/TW/52181736/miss-rose-pink-lipstick-250x250.jpeg",
+      "name": "Miss Rose Pink Lipstick",
+      "price": 55,
+      "brand": "Cosmetic World",
+      "location": "New Delhi, Delhi, India",
+      "mobile": "Call 07942554198"
+    }
+  ],
+  "relatedCategories": [
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 31
+    },
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 32
+    },
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 33
+    },
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 34
+    },
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 35
+    },
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 36
+    },
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 37
+    },
+    {
+      "image": "https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg",
+      "name": "Cosmetics",
+      "id": 38
+    }
   ]
 }
