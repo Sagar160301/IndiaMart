@@ -1,10 +1,9 @@
+import { useState } from "react";
+import "./loginpage.css";
+import indiamart_photo from "../../images/indiamart_photo.jpg";
 
-import { useState } from "react"
-import "./loginpage.css"
-import indiamart_photo from '../../images/indiamart_photo.jpg'
-
-export const LoginPage=()=>{
-    const [show, setshow] = useState(false);
+export const LoginPage = () => {
+  const [show, setshow] = useState(false);
   const [loginform, setloginform] = useState({
     mobileno: 0,
   });
@@ -22,12 +21,12 @@ export const LoginPage=()=>{
     area: "",
   });
 
-const opencreate=()=>{
-setshow(!show)
-console.log(show)
-}
+  const opencreate = () => {
+    setshow(!show);
+    console.log(show);
+  };
 
-const handellogin = async () => {
+  const handellogin = async () => {
     var phoneno = /^\d{10}$/;
     if (loginform.mobileno.match(phoneno)) {
       console.log(loginform);
@@ -40,6 +39,7 @@ const handellogin = async () => {
       });
       let data = await res.json();
       console.log(data);
+      // document.cookie = `token=${data.token}`;
       if (data.message) {
         setlerr(true);
         return;
@@ -63,51 +63,48 @@ const handellogin = async () => {
   const handelcreateform = (e) => {
     const { name, value } = e.target;
     setcreateform({
-
-        ...createform,
-        [name]:value
-    })
-}
-const handlecreate=async ()=>{
+      ...createform,
+      [name]: value,
+    });
+  };
+  const handlecreate = async () => {
     var phoneno = /^\d{10}$/;
-    var pin=/^\d{6}$/
-    for(const key in createform){
-            if(createform[key]===""||createform[key]===0){
-                setlerr(true)
-                console.log("empty")
-                return
-            }
-        }
-         if(!((createform.mobileno.match(phoneno)) && createform.pincode.match(pin)))
-        {
-            console.log("not")
-            setlerr(true)
-            return
-        }
-          else
-        {
-            let res=await fetch("http://localhost:9000/register",{
-            method:"POST",
-            headers:{
-            "content-type":"application/json"
-            },
-            body:JSON.stringify(createform)
-           });
-           let data=await res.json();
-           console.log(data)
-           console.log(createform)
-           if(data.message){
-            setlerr(true)
-            return
-           }
-           else{
-            setlerr(false);
-            return
-           }
-        }
-}
+    var pin = /^\d{6}$/;
+    for (const key in createform) {
+      if (createform[key] === "" || createform[key] === 0) {
+        setlerr(true);
+        console.log("empty");
+        return;
+      }
+    }
+    if (
+      !(createform.mobileno.match(phoneno) && createform.pincode.match(pin))
+    ) {
+      console.log("not");
+      setlerr(true);
+      return;
+    } else {
+      let res = await fetch("http://localhost:9000/register", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(createform),
+      });
+      let data = await res.json();
+      console.log(data);
+      console.log(createform);
+      if (data.message) {
+        setlerr(true);
+        return;
+      } else {
+        setlerr(false);
+        return;
+      }
+    }
+  };
 
-return (
+  return (
     <div
       className="loginandcreate"
       style={{
@@ -152,7 +149,6 @@ return (
                   <button id="submit" onClick={handellogin}>
                     Submit
                   </button>
-
                 </div>
                 <p className="newuser">
                   New User? <button onClick={opencreate}>Create Account</button>
@@ -168,65 +164,110 @@ return (
         <div className="c-top">
           <h1>Create Account</h1>
         </div>
-       
 
-            <div className="c-boxs">
-                <div className="personalbox">
-                    <div action="" className="personalform">
-                    <h2 id="personalinfo">Personal Information</h2>
-                        <div className="name">
-                            <h3>Name *</h3>
-                            <input type="text"  placeholder="Enter Your Name" name="name" onChange={handelcreateform}/>
-                        </div>
-                        <div className="mobile">
-                            <h3>Mobile Number *</h3>
-                            <input type="number"  placeholder="Enter Your Mobile Number" name="mobileno"  onChange={handelcreateform}/>
-                        </div>
-                        <div className="email">
-                            <h3>Email Address *</h3>
-                            <input type="email"  placeholder="Enter Your Email Address" name="email" onChange={handelcreateform}/>
-                        </div>
-                        <div className="dob">
-                            <h3>Date of Birth *</h3>
-                            <input type="date"  name="dateofbirth" onChange={handelcreateform}/>
-                        </div>
-                    </div>
-                    <div action="" className="address">
-                    <h2 id="addressinfo">Address Information</h2>
-                    <div className="city">
-                            <h3>PinCode *</h3>
-                            <input type="number"  placeholder="Enter Your City PinCode" name="pincode" onChange={handelcreateform}/>
-                            <h3>City *</h3>
-                            <input type="text" placeholder="Enter Your City" name="city" onChange={handelcreateform}/>
-                        </div>
-                        <div className="state">
-                            <h3>State *</h3>
-                            <input type="text"  placeholder="Enter Your State" name="state" onChange={handelcreateform}/>
-                            <h3>Country *</h3>
-                            <input type="text" placeholder="Enter Your Country" name="country" onChange={handelcreateform}/>
-                        </div>
-                        <div className="house">
-                            <h3>House Number *</h3>
-                            <input type="text"  placeholder="Enter Your House Number" name="houseno" onChange={handelcreateform} />
-                            <h3>Area/Street *</h3>
-                            <input type="text" placeholder="Enter Your Area" name="area" onChange={handelcreateform}/>
-                        </div>
-                    </div>
-                    <div className="l-errorbox" style={{display:l_err?"flex":"none"}}>
-                                <span >*Please fill all the details</span>
-                            </div>
-                    <div className="c-submit">
-                        <button onClick={handlecreate}>Submit</button>
-                    </div>
-                </div>
+        <div className="c-boxs">
+          <div className="personalbox">
+            <div action="" className="personalform">
+              <h2 id="personalinfo">Personal Information</h2>
+              <div className="name">
+                <h3>Name *</h3>
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  name="name"
+                  onChange={handelcreateform}
+                />
+              </div>
+              <div className="mobile">
+                <h3>Mobile Number *</h3>
+                <input
+                  type="number"
+                  placeholder="Enter Your Mobile Number"
+                  name="mobileno"
+                  onChange={handelcreateform}
+                />
+              </div>
+              <div className="email">
+                <h3>Email Address *</h3>
+                <input
+                  type="email"
+                  placeholder="Enter Your Email Address"
+                  name="email"
+                  onChange={handelcreateform}
+                />
+              </div>
+              <div className="dob">
+                <h3>Date of Birth *</h3>
+                <input
+                  type="date"
+                  name="dateofbirth"
+                  onChange={handelcreateform}
+                />
+              </div>
             </div>
-
-            
+            <div action="" className="address">
+              <h2 id="addressinfo">Address Information</h2>
+              <div className="city">
+                <h3>PinCode *</h3>
+                <input
+                  type="number"
+                  placeholder="Enter Your City PinCode"
+                  name="pincode"
+                  onChange={handelcreateform}
+                />
+                <h3>City *</h3>
+                <input
+                  type="text"
+                  placeholder="Enter Your City"
+                  name="city"
+                  onChange={handelcreateform}
+                />
+              </div>
+              <div className="state">
+                <h3>State *</h3>
+                <input
+                  type="text"
+                  placeholder="Enter Your State"
+                  name="state"
+                  onChange={handelcreateform}
+                />
+                <h3>Country *</h3>
+                <input
+                  type="text"
+                  placeholder="Enter Your Country"
+                  name="country"
+                  onChange={handelcreateform}
+                />
+              </div>
+              <div className="house">
+                <h3>House Number *</h3>
+                <input
+                  type="text"
+                  placeholder="Enter Your House Number"
+                  name="houseno"
+                  onChange={handelcreateform}
+                />
+                <h3>Area/Street *</h3>
+                <input
+                  type="text"
+                  placeholder="Enter Your Area"
+                  name="area"
+                  onChange={handelcreateform}
+                />
+              </div>
+            </div>
+            <div
+              className="l-errorbox"
+              style={{ display: l_err ? "flex" : "none" }}
+            >
+              <span>*Please fill all the details</span>
+            </div>
+            <div className="c-submit">
+              <button onClick={handlecreate}>Submit</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    )
-}
-
- 
-
+  );
+};
