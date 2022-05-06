@@ -2,6 +2,7 @@ import { CART } from "./action";
 
 const init = {
   cart: "",
+
 };
 
 export const cartReducer = (store = init, { type, payload }) => {
