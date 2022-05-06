@@ -1,6 +1,11 @@
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addCart } from "../../Redux/cart/action";
 import "./products.css";
 export const Products = ({ products, type }) => {
-  console.log(products, type);
+  const dispatch = useDispatch();
+  // console.log(products, type);
+  const navigate = useNavigate();
   return (
     <div className="allProductsDiv">
       {type !== "lipstick" ? (
@@ -28,7 +33,13 @@ export const Products = ({ products, type }) => {
                   </li>
                 </ul>
                 <div className="singleProductDetailsButtonDiv">
-                  <button className="singleProductDetailsButton">
+                  <button
+                    className="singleProductDetailsButton"
+                    onClick={() => {
+                      dispatch(addCart(e));
+                      navigate("/cartPage");
+                    }}
+                  >
                     Yes, I am interested!
                   </button>
                 </div>
