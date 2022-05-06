@@ -215,25 +215,25 @@ font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     
 }
-.address{
+.c-address{
     margin-top: 80px;
-    border: 1px solid #c9c6c6;
+    border: 1px solid #cfcdcd;
 }
-.address>h2{
+.c-address>h2{
     text-align: left;
     margin: 30px;
    
 }
-.address>div{
+.c-address>div{
     display: flex;
     margin: 20px 0px 30px 0px;
     
 }
-.address>div>h3{
+.c-address>div>h3{
     width: 250px;
     /* border: 1px solid red; */
 }
-.address>div>input{
+.c-address>div>input{
     width: 300px;
     height: 40px;
     padding: 5px 15px 5px;
@@ -251,8 +251,6 @@ font-size: 40px;
     padding: 8px 0px;
     width: 260px;
     background-color: rgb(0, 166, 153);
-    
-     
     border: 1px solid #00a699;
     color: #fff;
     cursor: pointer;

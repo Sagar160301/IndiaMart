@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./loginpage.css";
 import indiamart_photo from "../../images/indiamart_photo.jpg";
+import Cookies from 'js-cookie'
+import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
+    const navigate=useNavigate();
   const [show, setshow] = useState(false);
   const [loginform, setloginform] = useState({
     mobileno: 0,
@@ -43,8 +46,14 @@ export const LoginPage = () => {
       if (data.message) {
         setlerr(true);
         return;
-      } else {
+      } 
+      else {
+        // document.cookie = `token=${data.token}`;
+        Cookies.set('token', data.token)
+        let c=Cookies.get('token')
         setlerr(false);
+
+        navigate("/")
         return;
       }
     } else {
@@ -98,7 +107,12 @@ export const LoginPage = () => {
         setlerr(true);
         return;
       } else {
+        // document.cookie = `token=${data.token}`;
+        Cookies.set('token', data.token)
+        let c=Cookies.get('token')
+        
         setlerr(false);
+        navigate("/")
         return;
       }
     }
@@ -205,7 +219,7 @@ export const LoginPage = () => {
                 />
               </div>
             </div>
-            <div action="" className="address">
+            <div action="" className="c-address">
               <h2 id="addressinfo">Address Information</h2>
               <div className="city">
                 <h3>PinCode *</h3>
