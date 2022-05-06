@@ -4,7 +4,6 @@ import { AllRoute } from "./pages/allroute";
 import { LoginPage } from "./components/loginComponents/loginpage";
 import { Route, Routes } from "react-router-dom";
 import { Contact } from "./pages/ContactUs";
-import { AboutSection } from "./pages/About";
 
 function App() {
   return (
