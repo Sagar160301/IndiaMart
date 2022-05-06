@@ -10,21 +10,28 @@ import { RelatedCategories } from "../components/relatedCategories/relatedCatego
 import { RelatedProduct } from "../components/relatedProduct/relatedProduct";
 import { SimilarProduct } from "../components/similarCatogory/similarCategory";
 import { AboutSection } from "./About";
+import { Navbar } from "../components/Navbar/Navbar";
+import { Navbar2 } from "../components/Navbar2/Navbar2";
+import { Header } from "../components/Header/Header";
+import { Footer } from "../components/footer/Footer";
 
 export const AllRoute = () => {
   return (
     <div id="Landing">
+      <Navbar />
+      <Header />
+      <Navbar2 />
       <div id="Body">
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/aboutUs" element={<AboutSection />}></Route>
-          <Route></Route>
         </Routes>
         <HomeReviews />
         <ContactUs />
         <SimilarProduct />
         <RelatedProduct />
         <RelatedCategories />
+        <Footer />
       </div>
     </div>
   );
