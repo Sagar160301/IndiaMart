@@ -25,6 +25,7 @@ export const LoginPage = () => {
   };
   const handellogin = async () => {
     var phoneno = /^\d{10}$/;
+<<<<<<< HEAD
     if (loginform.mobileno.match(phoneno)) {
       console.log(loginform);
       let res = await fetch("http://localhost:9000/login", {
@@ -46,6 +47,93 @@ export const LoginPage = () => {
     } else {
       setlerr(true);
       return;
+=======
+  if((loginform.mobileno.match(phoneno)))
+        {
+           console.log(loginform)
+
+           setlerr(false)
+
+           let res=await fetch("http://localhost:9000/login",{
+            method:"POST",
+            headers:{
+            "content-type":"application/json"
+            },
+            body:JSON.stringify(loginform)
+           });
+           let data=await res.json();
+           console.log(data)
+           if(data.message){
+            setlerr(true)
+            return
+           }
+           else{
+            setlerr(false);
+            return
+           }
+           
+
+        }
+      else
+        {
+       setlerr(true)
+       return
+        }
+       
+    
+    
+    
+
+}
+const handlelogininput=(e)=>{
+const {name,value}=e.target
+
+    setloginform({
+        ...loginform,
+        [name]:value
+    })
+}
+const handelcreateform=(e)=>{
+    const {name,value}=e.target
+    setcreateform({
+        ...createform,
+        [name]:value
+    })
+}
+
+
+const handlecreate=()=>{
+
+const handlecreate=async ()=>{
+
+    var phoneno = /^\d{10}$/;
+    var pin=/^\d{6}$/
+    for(const key in createform){
+            if(createform[key]===""||createform[key]===0){
+                setlerr(true)
+                console.log("empty")
+                return
+            }
+        }
+
+        
+        
+        
+         if(!((createform.mobileno.match(phoneno)) && createform.pincode.match(pin)))
+
+        {
+            console.log("not")
+            setlerr(true)
+            return
+        }
+          else
+        {
+
+       setlerr(false)
+       console.log(createform)
+       return
+        }
+>>>>>>> 037258c436094baa03c2206ca6491f843e67e735
     }
   };
   const handlelogininput = (e) => {
