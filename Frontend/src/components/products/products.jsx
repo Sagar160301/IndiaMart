@@ -59,7 +59,13 @@ export const Products = ({ products, type }) => {
                 <h4 className="singleProductDetailsGetLatestPrice">
                   Get Latest Price
                 </h4>
-                <button className="singleProductDetailsButton">
+                <button
+                  className="singleProductDetailsButton"
+                  onClick={() => {
+                    dispatch(addCart(e));
+                    navigate("/cartPage");
+                  }}
+                >
                   Ask for Details
                 </button>
               </div>

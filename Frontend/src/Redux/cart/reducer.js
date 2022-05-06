@@ -1,7 +1,8 @@
 import { CART } from "./action";
 
 const init = {
-  cart: null,
+  cart: "",
+
 };
 
 export const cartReducer = (store = init, { type, payload }) => {
