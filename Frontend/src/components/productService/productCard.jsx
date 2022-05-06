@@ -55,7 +55,7 @@ export const ProductCard = ({ el }) => {
       <p>{el.para1}</p>
       <p>{el.para2}</p>
       <p>{el.para3}</p>
-      <Link to={"/"}>View Details &gt;</Link>
+      <Link to={`/product/${el.category}`}>View Details &gt;</Link>
     </ProductSingleCard>
   );
 };

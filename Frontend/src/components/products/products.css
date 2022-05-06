@@ -1,83 +1,88 @@
-.allProductsDiv{
-    margin-left: 20px;
+.allProductsDiv {
+  margin-left: 20px;
 }
 
-.singleProductDetails{
-    display: flex;
-    padding: 20px;
-    height: 500px;
-    margin: 15px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+.singleProductDetails {
+  display: flex;
+  padding: 20px;
+  height: 500px;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-.singleProductDetailsLeftSideDiv{
-    width: 35%;
-   height: 100%;
-   text-align: center;
-   cursor: pointer;
+.singleProductDetailsLeftSideDiv {
+  width: 35%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
 }
-.singleProductDetailsDiv{
-   width: 100%;
-   height: 90%;
-  
-   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+.singleProductDetailsDiv {
+  width: 100%;
+  height: 90%;
+
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-.singleProductDetailsImg{
+.singleProductDetailsImg {
   width: 60%;
   height: 100%;
-  
 }
-.singleProductDetailsInfo{
-   margin-left: 30px;
-    font-family: Arial ;
-    width: 60%;
-    
+.singleProductDetailsInfo {
+  margin-left: 30px;
+  font-family: Arial;
+  width: 60%;
 }
-.ulList{
-    font-family: Arial ;
-    color: rgb(90, 56, 56);
+singleProductDetailsInfo h1,
+h4,
+li,
+.singleProductDetailsHead {
+  text-align: left;
+  margin: 10px 0px;
 }
-.singleProductDetailsGetLatestPrice{
-    color:blue;
-    text-decoration: underline;
-    cursor: pointer;
+.ulList {
+  font-family: Arial;
+  color: rgb(90, 56, 56);
 }
-.singleProductDetailsGetLatestPrice:hover{
-    color: rgb(193, 90, 90);
+.singleProductDetailsGetLatestPrice {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
 }
-.singleProductDetailsButton{
-    color: white;
-    font-family: Arial ;
-    background-color: rgb(3,117,108);
-    width: 250px;
-    padding: 10px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+.singleProductDetailsGetLatestPrice:hover {
+  color: rgb(193, 90, 90);
 }
-.singleProductDetailsButtonDiv{
-    text-align: center;
-     margin-top: 40px;
+.singleProductDetailsButton {
+  color: white;
+  font-family: Arial;
+  background-color: rgb(3, 117, 108);
+  width: 250px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.LipstickOuterdiv{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap:40px;
-    margin-top: 30px;
+.singleProductDetailsButtonDiv {
+  text-align: center;
+  margin-top: 40px;
 }
-.ListickDiv{
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    padding-bottom: 10px;
-    
+.LipstickOuterdiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  margin-top: 30px;
 }
-.LipsticImgDiv{
-    width: 75%;
-    margin: auto;
-    text-align: center;
-   
-    height: 400px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+.ListickDiv {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  padding-bottom: 10px;
 }
-.LipsticImgDiv>img{
-    margin-top: 90px;
+.LipsticImgDiv {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.LipsticImgDiv > img {
+  margin-top: 90px;
 }
