@@ -97,12 +97,10 @@ const handlecreate=async ()=>{
                 console.log("empty")
                 return
             }
+        }
 
         
-        else if(!((createform.mobileno.match(phoneno)) && createform.pincode.match(pin)))
-
-            
-        }
+        
         
          if(!((createform.mobileno.match(phoneno)) && createform.pincode.match(pin)))
 
