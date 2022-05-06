@@ -1,40 +1,61 @@
-import "./products.css"
-export const Products=({products,type})=>{
-    
-    return <div className="allProductsDiv">
-        {type!=="Lipstick" ?
-        products.products.map((e)=>{
-            return <div className="singleProductDetails">
-                <div className="singleProductDetailsLeftSideDiv">
+import "./products.css";
+export const Products = ({ products, type }) => {
+  console.log(products, type);
+  return (
+    <div className="allProductsDiv">
+      {type !== "lipstick" ? (
+        products.map((e) => {
+          return (
+            <div className="singleProductDetails">
+              <div className="singleProductDetailsLeftSideDiv">
                 <div className="singleProductDetailsDiv">
-                <img className="singleProductDetailsImg" src={e.img}/>
+                  <img className="singleProductDetailsImg" src={e.image} />
                 </div>
                 <p>Interested in this product?</p>
+              </div>
+              <div className="singleProductDetailsInfo">
+                <h2 className="singleProductDetailsHead">{e.name}</h2>
+                <h4 className="singleProductDetailsGetLatestPrice">
+                  Get Latest Price
+                </h4>
+                <ul>
+                  <li>Easy spreading, water proof, Non oily formula.</li>
+                  <li>Enriched with Vitamin-E and Aloe vera.</li>
+                  <li>Improves natural skin texure.</li>
+                  <li>
+                    Controls Sebum to give your facial skin a flawless matt
+                    finish all day long.
+                  </li>
+                </ul>
+                <div className="singleProductDetailsButtonDiv">
+                  <button className="singleProductDetailsButton">
+                    Yes, I am interested!
+                  </button>
                 </div>
-                <div className="singleProductDetailsInfo">
-                    <h2 className="singleProductDetailsHead">{e.head}</h2>
-                    <h4 className="singleProductDetailsGetLatestPrice">Get Latest Price</h4>
-                    <ul>
-                  {e.info.map((el)=>{
-                      return <li className="ulList">{el}</li>
-                  })}
-                  </ul>
-                  <div className="singleProductDetailsButtonDiv">
-                 <button className="singleProductDetailsButton">Yes, I am interested!</button>
-                  </div>
+              </div>
+            </div>
+          );
+        })
+      ) : (
+        <div className="LipstickOuterdiv">
+          {products.map((e) => {
+            return (
+              <div className="ListickDiv">
+                <h2 className="singleProductDetailsHead">{e.head}</h2>
+                <div className="LipsticImgDiv">
+                  <img src={e.image} />
                 </div>
-            </div>
-        }): <div className="LipstickOuterdiv">{products.products.map((e)=>{
-            return <div className="ListickDiv">
-                   <h2 className="singleProductDetailsHead">{e.head}</h2>
-                   <div className="LipsticImgDiv">
-                   <img src={e.img}/>
-                   </div>
-                   <h4 className="singleProductDetailsGetLatestPrice">Get Latest Price</h4>
-                   <button className="singleProductDetailsButton">Ask for Details</button>
-            </div>
-        })}
+                <h4 className="singleProductDetailsGetLatestPrice">
+                  Get Latest Price
+                </h4>
+                <button className="singleProductDetailsButton">
+                  Ask for Details
+                </button>
+              </div>
+            );
+          })}
         </div>
-}
+      )}
     </div>
-}
+  );
+};
