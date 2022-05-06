@@ -1,8 +1,8 @@
 import "./products.css"
-export const Products=({products})=>{
+export const Products=({products,type})=>{
     
     return <div className="allProductsDiv">
-        {products.head!=="Lipstick" ?
+        {type!=="Lipstick" ?
         products.products.map((e)=>{
             return <div className="singleProductDetails">
                 <div className="singleProductDetailsLeftSideDiv">

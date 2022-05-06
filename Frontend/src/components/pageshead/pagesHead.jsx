@@ -1,8 +1,8 @@
 import "./pagesHead.css"
 
-export const Producthead=({productData})=>{
+export const Producthead=({productData,type})=>{
     return <div className="pageMainDiv">
-        <h2 className="pageHead">{productData.head}</h2>
+        <h2 className="pageHead">{type}</h2>
         <h5 className="pageInfo">{productData.info}</h5>
          <div className="productDataDiv">
              {productData.products.map((e)=>{

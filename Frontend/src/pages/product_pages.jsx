@@ -5,7 +5,6 @@ import { Sidebar } from "../components/pages_sidebar/pages_sidebar";
 import "./product_pages.css"
 export const Product_pages=({type})=>{
     const [data,setData]=useState([])
-
     useEffect(()=>{
         getData()
     },[])
@@ -20,8 +19,8 @@ export const Product_pages=({type})=>{
         <Sidebar/>
     </div>
     <div className="flexmainDiv">
-    <Producthead productData={data}></Producthead>
-    <Products products={data}></Products>
+    <Producthead productData={data} type={type}></Producthead>
+    <Products products={data} type={type}></Products>
     </div>
 </div>
  }
