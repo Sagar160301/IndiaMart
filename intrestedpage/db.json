@@ -1,0 +1,76 @@
+{
+  "user": [
+    {
+    "name":"vikash",
+    "phone":917488027671,
+    "email":"vikash@gmail.com"
+                      }],
+
+  "Product": {},
+  "productService": [
+    {
+      "image": "https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg",
+      "name": "Makeup",
+      "p1": "Fondation",
+      "p2": "Compact",
+      "p3": "Pan Cake Foundation",
+      "id": 10
+    },
+    {
+      "image": "https://4.imimg.com/data4/QY/OX/GLADMIN-3792183/1-250x250.jpg",
+      "name": "Lipstick",
+      "p1": "Baked Brick Lipstick",
+      "p2": "Cerise Pink Lipstick",
+      "p3": "Coral Red Lipstick",
+      "id": 11
+    },
+    {
+      "image": "https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg",
+      "name": "Makeup",
+      "p1": "Fondation",
+      "p2": "Compact",
+      "p3": "Pan Cake Foundation",
+      "id": 12
+    },
+    {
+      "image": "https://4.imimg.com/data4/QY/OX/GLADMIN-3792183/1-250x250.jpg",
+      "name": "Lipstick",
+      "p1": "Baked Brick Lipstick",
+      "p2": "Cerise Pink Lipstick",
+      "p3": "Coral Red Lipstick",
+      "id": 13
+    },
+    {
+      "image": "https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg",
+      "name": "Makeup",
+      "p1": "Fondation",
+      "p2": "Compact",
+      "p3": "Pan Cake Foundation",
+      "id": 14
+    },
+    {
+      "image": "https://4.imimg.com/data4/QY/OX/GLADMIN-3792183/1-250x250.jpg",
+      "name": "Lipstick",
+      "p1": "Baked Brick Lipstick",
+      "p2": "Cerise Pink Lipstick",
+      "p3": "Coral Red Lipstick",
+      "id": 15
+    },
+    {
+      "image": "https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg",
+      "name": "Makeup",
+      "p1": "Fondation",
+      "p2": "Compact",
+      "p3": "Pan Cake Foundation",
+      "id": 16
+    },
+    {
+      "image": "https://4.imimg.com/data4/QY/OX/GLADMIN-3792183/1-250x250.jpg",
+      "name": "Lipstick",
+      "p1": "Baked Brick Lipstick",
+      "p2": "Cerise Pink Lipstick",
+      "p3": "Coral Red Lipstick",
+      "id": 17
+    }
+  ]
+}
