@@ -26,17 +26,11 @@ setshow(!show)
 console.log(show)
 }
 
-const handellogin=()=>{
-
 const handellogin=async ()=>{
-
     var phoneno = /^\d{10}$/;
   if((loginform.mobileno.match(phoneno)))
         {
            console.log(loginform)
-
-           setlerr(false)
-
            let res=await fetch("http://localhost:9000/login",{
             method:"POST",
             headers:{
@@ -54,23 +48,15 @@ const handellogin=async ()=>{
             setlerr(false);
             return
            }
-           
-
         }
       else
         {
        setlerr(true)
        return
         }
-       
-    
-    
-    
-
 }
 const handlelogininput=(e)=>{
 const {name,value}=e.target
-
     setloginform({
         ...loginform,
         [name]:value
@@ -83,12 +69,7 @@ const handelcreateform=(e)=>{
         [name]:value
     })
 }
-
-
-const handlecreate=()=>{
-
 const handlecreate=async ()=>{
-
     var phoneno = /^\d{10}$/;
     var pin=/^\d{6}$/
     for(const key in createform){
@@ -98,12 +79,7 @@ const handlecreate=async ()=>{
                 return
             }
         }
-
-        
-        
-        
          if(!((createform.mobileno.match(phoneno)) && createform.pincode.match(pin)))
-
         {
             console.log("not")
             setlerr(true)
@@ -111,14 +87,6 @@ const handlecreate=async ()=>{
         }
           else
         {
-
-       setlerr(false)
-       console.log(createform)
-       return
-        }
-    }
-
-            
             let res=await fetch("http://localhost:9000/register",{
             method:"POST",
             headers:{
@@ -137,22 +105,13 @@ const handlecreate=async ()=>{
             setlerr(false);
             return
            }
-       
-       
         }
-    
-
-       
-        
 }
-
 
     return (
         <div className="loginandcreate"  style={{position:!show?"fixed":"static",backgroundImage:!show?`url(${indiamart_photo})`:"none"}} >
         <div className="loginmain" style={{display:!show?"block":"none"}}>
             <div className="loginpopup" >
-                
-               
                 <div className="loginform" >
                 <img src="//utils.imimg.com/header/gifs/3.png" className="close"></img>
                     <div className="step1">
@@ -162,25 +121,17 @@ const handlecreate=async ()=>{
                         <div className="l-form">
                                  <h3>Mobile Number</h3>
                             <div className="l-formmain">
-                               
                                 <div className="countrydrop"></div>
                                 <div className="countryno">+91</div>
                                 <input type="number" className="mobile" name="mobileno"  placeholder="Enter Your Mobile Number" onChange={handlelogininput}/>
                             </div>
                             <div className="l-errorbox" style={{display:l_err?"flex":"none"}}>
-
-                                <span >*Please enter correct mobile number</span>
-
                                 <span >*Please enter correct mobile number or mobile number not exist</span>
-
                             </div>
                             <div className="l-submit">
                                 <button id="submit" onClick={handellogin}>Submit</button>
                             </div>
                             <p className="newuser">New User? <button onClick={opencreate}>Create Account</button></p>
-
-                                
-                            
                         </div>
                     </div>
                 </div>
@@ -194,7 +145,6 @@ const handlecreate=async ()=>{
             </div>
             <div className="c-boxs">
                 <div className="personalbox">
-                    
                     <div action="" className="personalform">
                     <h2 id="personalinfo">Personal Information</h2>
                         <div className="name">
@@ -241,12 +191,9 @@ const handlecreate=async ()=>{
                     <div className="c-submit">
                         <button onClick={handlecreate}>Submit</button>
                     </div>
-                    
                 </div>
             </div>
-            
         </div>
     </div>
-       
     )
 }
