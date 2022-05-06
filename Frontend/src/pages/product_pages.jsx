@@ -6,7 +6,7 @@ import "./product_pages.css";
 import { useParams } from "react-router-dom";
 export const Product_pages = ({ type }) => {
   const { category } = useParams();
-  console.log(category);
+
   const [data, setData] = useState([]);
   useEffect(() => {
     getData();
@@ -17,7 +17,7 @@ export const Product_pages = ({ type }) => {
     let FetchedData = await res.json();
     setData(FetchedData);
   };
-  console.log(data);
+
   return (
     <div className="flexDiv">
       <div className="flexSidebarDiv">
