@@ -14,6 +14,7 @@ import { Navbar } from "../components/Navbar/Navbar";
 import { Navbar2 } from "../components/Navbar2/Navbar2";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/footer/Footer";
+import { ProductAndService } from "./ProductAndService";
 
 export const AllRoute = () => {
   return (
@@ -25,6 +26,10 @@ export const AllRoute = () => {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/aboutUs" element={<AboutSection />}></Route>
+          <Route
+            path="/product/:category"
+            element={<ProductAndService />}
+          ></Route>
         </Routes>
         <HomeReviews />
         <ContactUs />
