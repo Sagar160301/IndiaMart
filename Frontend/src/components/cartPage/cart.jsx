@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 import "./cart.css";
 
@@ -71,5 +70,7 @@ export const Card = () => {
         </div>
       </div>
     </div>
+
+ 
   );
 };
