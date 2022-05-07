@@ -26,6 +26,7 @@ padding: 5px;
 }
 .sidebarPageHead{
     margin: 0px;
+   text-align: left;
     font-weight: bold;
     font-family: Arial;
     color:rgb(69, 45, 45);
@@ -42,6 +43,7 @@ padding: 5px;
     font-size: 12px;
     color:rgb(123, 116, 116);
     cursor: pointer;
+    text-align: left;
 }
 .sidebarAvailable:hover{
     text-decoration: underline;
@@ -50,6 +52,7 @@ padding: 5px;
 .categoryDiv{
     margin-top: 0px;
     padding: 5px;
+   
 }
 .categoryDiv>p{
     margin: 0px;
@@ -57,6 +60,7 @@ padding: 5px;
     color:rgb(123, 116, 116);
     font-size: 13px;
     cursor: pointer;
+    text-align: left;
 
 }
 .categoryDiv>p:hover{

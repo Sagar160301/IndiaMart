@@ -46,6 +46,7 @@ li,
   text-decoration: underline;
   cursor: pointer;
   text-align: center;
+  text-align: left;
 }
 .singleProductDetailsGetLatestPrice:hover {
   color: rgb(193, 90, 90);

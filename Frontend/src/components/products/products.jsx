@@ -70,7 +70,7 @@ export const Products = ({ products, type }) => {
   
   return (
     <div className="allProductsDiv">
-      {type !== "lipstick" ? (
+      {type !=="lipstick" ? (
         <div id="allproductsouterdiv">
         {products.map((e) => {
           return (
@@ -185,7 +185,7 @@ export const Products = ({ products, type }) => {
           {products.map((e) => {
             return (
               <div className="ListickDiv">
-                <h2 className="singleProductDetailsHead">{e.head}</h2>
+                <h2 className="singleProductDetailsHead">{e.name}</h2>
                 <div className="LipsticImgDiv">
                   <img src={e.image} />
                 </div>

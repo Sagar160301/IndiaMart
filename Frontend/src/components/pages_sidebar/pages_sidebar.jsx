@@ -19,7 +19,7 @@ return <div className="sidebarDiv">
             <div  id="Makeup" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
                 <div className="sidebarDivs">
                     <div>
-                         <p onClick={()=>navigate("/product/Makeup")} className="sidebarPageHead">Makeup</p> 
+                         <p onClick={()=>navigate("/product/makeup")} className="sidebarPageHead">Makeup</p> 
                          {sidebar.Makeup===false ? <p onClick={()=>navigate("/product/Makeup")} className="sidebarAvailable">4 products available</p>:null}
                    </div> 
                      {sidebar.Makeup===true ? <img id="Makeup"  className="selectImg" src={up}/>:<img id="Makeup" className="selectImg" src={down}/>}
@@ -35,7 +35,7 @@ return <div className="sidebarDiv">
                <div className="sidebarDivs">
                   <div>
                           <p onClick={()=>navigate("/product/lipstick")} className="sidebarPageHead">Lipstick</p> 
-                          {sidebar.Lipstick===false ?<p onClick={()=>navigate("/product/lipstick")} className="sidebarAvailable">9 products available</p>:null}
+                          {sidebar.Lipstick===false ? <p onClick={()=>navigate("/product/lipstick")} className="sidebarAvailable">9 products available</p>:null}
                   </div> 
                       {sidebar.Lipstick===true ? <img id="Lipstick"  className="selectImg" src={up}/>:<img id="Lipstick" className="selectImg" src={down}/>}
                </div>
