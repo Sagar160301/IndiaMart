@@ -223,7 +223,15 @@ export const Products = ({ products, type }) => {
                    placeholder="enter the gst number" 
                    name="gst_number"
                    onChange={handleinputcart}/>
-                   <span>{carterr}</span>
+                   <div
+                  className="l-errorbox"
+                  style={{ display: setcarterr ? "flex" : "none" }}
+                >
+                  <span>
+                    *Please enter correct mobile number or mobile number not
+                    exist
+                  </span>
+                </div>
                   <input type="submit" id="submit" value="Submit" />
                 </form>
                 {/* <p>Your contact Information { }</p> */}
@@ -352,7 +360,15 @@ export const Products = ({ products, type }) => {
                   <input type="text" placeholder="enter the gst number" onChange={handleinputcart}
                   name="gst_number"
                    />
-                   <span>{carterr}</span>
+                   <div
+                  className="l-errorbox"
+                  style={{ display: setcarterr ? "flex" : "none" }}
+                >
+                  <span>
+                    *Please enter correct mobile number or mobile number not
+                    exist
+                  </span>
+                </div>
                   <input type="submit" id="submit" value="Submit" />
                 </form>
                 {/* <p>Your contact Information { }</p> */}
