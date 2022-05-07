@@ -97,7 +97,7 @@ export const Products = ({ products, type }) => {
         <div id="allproductsouterdiv">
         {products.map((e) => {
           return (
-            <div className="singleProductDetails">
+            <div key={e._id} className="singleProductDetails">
               <div className="singleProductDetailsLeftSideDiv">
                 <div className="singleProductDetailsDiv">
                   <img className="singleProductDetailsImg" src={e.image} />
@@ -213,7 +213,7 @@ export const Products = ({ products, type }) => {
         <div className="LipstickOuterdiv">
           {products.map((e) => {
             return (
-              <div className="ListickDiv">
+              <div key={e._id} className="ListickDiv">
                 <h2 className="singleProductDetailsHeadL">{e.name}</h2>
                 <div className="LipsticImgDiv">
                   <img src={e.image} />
