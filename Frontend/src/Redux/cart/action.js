@@ -6,3 +6,14 @@ export const addCart = (data) => {
     payload: data,
   };
 };
+
+
+export const TOKEN = "TOKEN_DATA";
+
+export const addToken = (data) => {
+  return {
+    type: TOKEN,
+    payload: data,
+  };
+};
+

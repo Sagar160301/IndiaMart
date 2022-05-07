@@ -1,7 +1,8 @@
-import { CART } from "./action";
+import { CART,TOKEN } from "./action";
 
 const init = {
   cart: "",
+  token:null,
 
 };
 
@@ -13,6 +14,11 @@ export const cartReducer = (store = init, { type, payload }) => {
         ...store,
         cart: payload,
       };
+      case TOKEN:
+        return {
+          ...store,
+          token: payload,
+        }
     default:
       return store;
   }
