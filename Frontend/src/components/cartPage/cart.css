@@ -1,9 +1,10 @@
-
+/* 
 #cartPage {
-  background: url("../../images//indiamart_photo.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width:100%;
+  height: 100%;
+  position: fixed;
+  background:transparent;
+ 
 }
 
 #cartPage .card {
@@ -12,9 +13,6 @@
   display: grid;
   grid-template-columns: 4fr 8fr;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.627) 0px 154px 155px,
-    rgba(0, 0, 0, 0.61) 0px -100px 300px, rgba(0, 0, 0, 0.566) 0px 4px 6px,
-    rgba(0, 0, 0, 0.581) 0px 12px 13px, rgba(17, 17, 17, 0.575) 0px -300px 50px;
   height: 60vh;
   border-radius: 10px;
   height: 90vh;
@@ -77,4 +75,4 @@
   padding-bottom: 10px;
   margin: auto;
 
-}
+} */

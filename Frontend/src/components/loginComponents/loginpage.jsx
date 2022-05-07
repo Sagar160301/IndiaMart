@@ -1,8 +1,17 @@
 import { useState } from "react";
 import "./loginpage.css";
 import indiamart_photo from "../../images/indiamart_photo.jpg";
+import Cookies from 'js-cookie'
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../Redux/cart/action";
+import { useSelector } from "react-redux";
 
 export const LoginPage = () => {
+  const token = useSelector((store) => store.cartReducer.token);
+
+    const dispatch =useDispatch();
+    const navigate=useNavigate();
   const [show, setshow] = useState(false);
   const [loginform, setloginform] = useState({
     mobileno: 0,
@@ -43,8 +52,17 @@ export const LoginPage = () => {
       if (data.message) {
         setlerr(true);
         return;
-      } else {
+      } 
+      else {
+        // document.cookie = `token=${data.token}`;
+        Cookies.set('token', data.token)
+        let c=Cookies.get('token')
+        dispatch(addToken(c));
+        
+       
         setlerr(false);
+
+        navigate("/")
         return;
       }
     } else {
@@ -92,13 +110,19 @@ export const LoginPage = () => {
         body: JSON.stringify(createform),
       });
       let data = await res.json();
-      console.log(data);
-      console.log(createform);
+     
       if (data.message) {
         setlerr(true);
         return;
       } else {
+        // document.cookie = `token=${data.token}`;
+        Cookies.set('token', data.token)
+        let c=Cookies.get('token')
+        dispatch(addToken(c));
+        
+        
         setlerr(false);
+        navigate("/")
         return;
       }
     }
@@ -118,6 +142,9 @@ export const LoginPage = () => {
             <img
               src="//utils.imimg.com/header/gifs/3.png"
               className="close"
+              onClick={()=>{
+                navigate("/")
+              }}
             ></img>
             <div className="step1">
               <h2>Sign In</h2>
@@ -205,7 +232,7 @@ export const LoginPage = () => {
                 />
               </div>
             </div>
-            <div action="" className="address">
+            <div action="" className="c-address">
               <h2 id="addressinfo">Address Information</h2>
               <div className="city">
                 <h3>PinCode *</h3>

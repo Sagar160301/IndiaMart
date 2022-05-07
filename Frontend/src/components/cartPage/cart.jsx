@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./cart.css";
+import { useSelector } from "react-redux";
 
 export const Card = () => {
   const navigate = useNavigate();

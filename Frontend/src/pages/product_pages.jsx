@@ -4,17 +4,18 @@ import { useEffect, useState } from "react";
 import { Sidebar } from "../components/pages_sidebar/pages_sidebar";
 import "./product_pages.css";
 import { useParams } from "react-router-dom";
-export const Product_pages = ({ type }) => {
+export const Product_pages = () => {
   const { category } = useParams();
-
+  console.log(category)
   const [data, setData] = useState([]);
   useEffect(() => {
     getData();
-  }, []);
+  },[category]);
 
   const getData = async () => {
     let res = await fetch(`http://localhost:9000/products/${category}`);
     let FetchedData = await res.json();
+    console.log(FetchedData)
     setData(FetchedData);
   };
 
