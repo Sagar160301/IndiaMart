@@ -510,7 +510,9 @@ const NavDiv2 = () => {
             </div>
            
             <div className="las">
-              <p style={{fontSize:"18px",marginLeft:"-20px"}}>
+              <p style={{fontSize:"18px",marginLeft:"-20px"}} onClick={()=>{
+                Cookies.remove('token')
+              }} >
                 <a href="">Sign In as Different User</a>
               </p>
             </div>

@@ -142,6 +142,9 @@ export const LoginPage = () => {
             <img
               src="//utils.imimg.com/header/gifs/3.png"
               className="close"
+              onClick={()=>{
+                navigate("/")
+              }}
             ></img>
             <div className="step1">
               <h2>Sign In</h2>

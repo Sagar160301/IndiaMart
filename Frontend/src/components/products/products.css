@@ -196,3 +196,37 @@ li,
   margin-left: 100px;
 }
 
+.thankyoushow{
+  width: 60%;
+  margin: 80px auto;
+  background-color: white;
+  
+  border-radius: 10px;
+  height: 90vh;
+
+}
+.closediv{
+  margin-top: 10px;
+  /* border: 1px solid red; */
+  /* text-align: right; */
+  height: 25px;
+  
+}
+.t-close{
+  /* align-items: right; */
+  margin-left: 900px;
+  height: 100%;
+ 
+  cursor: pointer;
+  /* position: absolute; */
+}
+
+.r-close{
+  height: 20px;
+  width: 10px;
+}
+.r-closediv{
+  width: 30px;
+  margin-left: 600px;
+  cursor: pointer;
+}

@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { addCart } from "../../Redux/cart/action";
 import { useSelector } from "react-redux";
 import "./products.css";
+import thankimg from "../../images/thankyou_image.jpg"
 import { useState,useEffect } from "react";
 export const Products = ({ products, type }) => {
   const cart = useSelector((store) => store.cartReducer.cart);
   const token = useSelector((store) => store.cartReducer.token);
   const [carterr,setcarterr]=useState(false)
+  const [displaythank,setthank]=useState(false)
   const [cartform,setcartform]=useState({
     qty:0,
     price:"",
@@ -61,7 +63,8 @@ export const Products = ({ products, type }) => {
         // document.cookie = `token=${data.token}`;
        
         setcarterr(false);
-        setshowcart(false)
+        // setshowcart(false)
+        setthank(true);
         return;
       }
     
@@ -136,7 +139,17 @@ export const Products = ({ products, type }) => {
           );
         })}
         <div id="cartPage" style={{ display: showcart ? "flex" : "none" }}>
-            <div className="card">
+        {!displaythank?
+            (<div className="card">
+            {/* <div className="closediv">
+                <img
+              src="//utils.imimg.com/header/gifs/3.png"
+              className="t-close" onClick={()=>{
+                setshowcart(false);
+                setthank(false);
+              }}
+            ></img>
+                </div> */}
               <div id="left">
                 <img src={cart.image} alt="" />
                 <h1 className="formData">{cart.name}</h1>
@@ -149,6 +162,15 @@ export const Products = ({ products, type }) => {
                 </div>
               </div>
               <div id="right">
+              <div className="r-closediv">
+                <img
+              src="//utils.imimg.com/header/gifs/3.png"
+              className="r-close" onClick={()=>{
+                setshowcart(false);
+                setthank(false);
+              }}
+            ></img>
+                </div>
                 <form action="" onSubmit={handleSubmit}>
                   <h2 className="formData">
                     Adding a few details of your requirement can get you quick
@@ -206,7 +228,33 @@ export const Products = ({ products, type }) => {
                 </form>
                 {/* <p>Your contact Information { }</p> */}
               </div>
+              
             </div>
+            ):(
+              <div className="thankyoushow">
+                <div className="closediv">
+                <img
+              src="//utils.imimg.com/header/gifs/3.png"
+              className="t-close" onClick={()=>{
+                setshowcart(false);
+                setthank(false);
+              }}
+            ></img>
+                </div>
+                
+                <h2>Thank You !</h2>
+                <p>Your requirement has been sent to Blue Heaven Cosmetics (P) Ltd</p>
+                <p>
+            Verify your email <b>{addressform.email}</b> as suppliers are more
+            likely to contact verified buyers.
+          </p>
+          <br />
+          <hr />
+          <img src={thankimg} alt="" />
+              </div>
+            )
+            }
+
           </div>
         </div>
       ) : (
@@ -235,7 +283,8 @@ export const Products = ({ products, type }) => {
             );
           })}
           <div id="cartPage" style={{ display: showcart ? "flex" : "none" }}>
-            <div className="card">
+          {!displaythank?
+            (<div className="card">
               <div id="left">
                 <img src={cart.image} alt="" />
                 <h1 className="formData">{cart.name}</h1>
@@ -308,7 +357,31 @@ export const Products = ({ products, type }) => {
                 </form>
                 {/* <p>Your contact Information { }</p> */}
               </div>
-            </div>
+            </div>) :
+            (
+              <div className="thankyoushow">
+                <div className="closediv">
+                <img
+              src="//utils.imimg.com/header/gifs/3.png"
+              className="t-close" onClick={()=>{
+                setshowcart(false);
+                setthank(false);
+              }}
+            ></img>
+                </div>
+                
+                <h2>Thank You !</h2>
+                <p>Your requirement has been sent to Blue Heaven Cosmetics (P) Ltd</p>
+                <p>
+            Verify your email <b>{addressform.email}</b> as suppliers are more
+            likely to contact verified buyers.
+          </p>
+          <br />
+          <hr />
+          <img src={thankimg} alt="" />
+              </div>
+            )}
+
           </div>
         </div>
       )}
