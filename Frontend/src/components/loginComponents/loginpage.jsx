@@ -39,7 +39,7 @@ export const LoginPage = () => {
     var phoneno = /^\d{10}$/;
     if (loginform.mobileno.match(phoneno)) {
       console.log(loginform);
-      let res = await fetch("http://localhost:9000/login", {
+      let res = await fetch("https://sagarmart.herokuapp.com/login", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -102,7 +102,7 @@ export const LoginPage = () => {
       setlerr(true);
       return;
     } else {
-      let res = await fetch("http://localhost:9000/register", {
+      let res = await fetch("https://sagarmart.herokuapp.com/register", {
         method: "POST",
         headers: {
           "content-type": "application/json",

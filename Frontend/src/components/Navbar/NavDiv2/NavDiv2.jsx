@@ -30,7 +30,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../../Redux/cart/action";
 import Cookies from 'js-cookie'
-import axios from "axios"
+
 const NavDiv2 = () => {
   const dispatch =useDispatch();
   const [popupform,setpopupform]=useState({})
@@ -47,7 +47,7 @@ const NavDiv2 = () => {
     
   }, [])
   async function getdata() {
-  let res= await fetch("http://localhost:9000/users",{
+  let res= await fetch("https://sagarmart.herokuapp.com/users",{
     method: "GET",
     headers: {
       "content-type": "application/json",

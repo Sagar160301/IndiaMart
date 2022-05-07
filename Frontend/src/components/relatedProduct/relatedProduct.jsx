@@ -10,7 +10,7 @@ export const RelatedProduct = () => {
 
   const getData = async () => {
     try {
-      let res = await fetch("http://localhost:9000/relatedProduct");
+      let res = await fetch("https://sagarmart.herokuapp.com/relatedProduct");
       let allData = await res.json();
       setData(allData);
     } catch (error) {

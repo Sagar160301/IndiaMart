@@ -45,7 +45,7 @@ export const Products = ({ products, type }) => {
       }
     }
     
-      let res = await fetch("http://localhost:9000/booking", {
+      let res = await fetch("https://sagarmart.herokuapp.com/booking", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -82,7 +82,7 @@ export const Products = ({ products, type }) => {
     
   }, [])
   async function getdata() {
-  let res= await fetch("http://localhost:9000/users",{
+  let res= await fetch("https://sagarmart.herokuapp.com/users",{
     method: "GET",
     headers: {
       "content-type": "application/json",
@@ -141,15 +141,7 @@ export const Products = ({ products, type }) => {
         <div id="cartPage" style={{ display: showcart ? "flex" : "none" }}>
         {!displaythank?
             (<div className="card">
-            {/* <div className="closediv">
-                <img
-              src="//utils.imimg.com/header/gifs/3.png"
-              className="t-close" onClick={()=>{
-                setshowcart(false);
-                setthank(false);
-              }}
-            ></img>
-                </div> */}
+            
               <div id="left">
                 <img src={cart.image} alt="" />
                 <h1 className="formData">{cart.name}</h1>
@@ -305,6 +297,15 @@ export const Products = ({ products, type }) => {
                 </div>
               </div>
               <div id="right">
+              <div className="r-closediv">
+                <img
+              src="//utils.imimg.com/header/gifs/3.png"
+              className="r-close" onClick={()=>{
+                setshowcart(false);
+                setthank(false);
+              }}
+            ></img>
+                </div>
                 <form action="" onSubmit={handleSubmit}>
                   <h2 className="formData">
                     Adding a few details of your requirement can get you quick
