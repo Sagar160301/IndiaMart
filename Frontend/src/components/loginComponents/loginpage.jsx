@@ -3,8 +3,14 @@ import "./loginpage.css";
 import indiamart_photo from "../../images/indiamart_photo.jpg";
 import Cookies from 'js-cookie'
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../Redux/cart/action";
+import { useSelector } from "react-redux";
 
 export const LoginPage = () => {
+  const token = useSelector((store) => store.cartReducer.token);
+
+    const dispatch =useDispatch();
     const navigate=useNavigate();
   const [show, setshow] = useState(false);
   const [loginform, setloginform] = useState({
@@ -51,6 +57,9 @@ export const LoginPage = () => {
         // document.cookie = `token=${data.token}`;
         Cookies.set('token', data.token)
         let c=Cookies.get('token')
+        dispatch(addToken(c));
+        
+       
         setlerr(false);
 
         navigate("/")
@@ -101,8 +110,7 @@ export const LoginPage = () => {
         body: JSON.stringify(createform),
       });
       let data = await res.json();
-      console.log(data);
-      console.log(createform);
+     
       if (data.message) {
         setlerr(true);
         return;
@@ -110,6 +118,8 @@ export const LoginPage = () => {
         // document.cookie = `token=${data.token}`;
         Cookies.set('token', data.token)
         let c=Cookies.get('token')
+        dispatch(addToken(c));
+        
         
         setlerr(false);
         navigate("/")

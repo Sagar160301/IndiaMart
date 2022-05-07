@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Navbar.css";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import StorefrontIcon from "@mui/icons-material/Storefront";
@@ -27,8 +27,38 @@ import SendToMobileIcon from "@mui/icons-material/SendToMobile";
 import MobileFriendlyIcon from "@mui/icons-material/MobileFriendly";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../../Redux/cart/action";
+import Cookies from 'js-cookie'
+import axios from "axios"
 const NavDiv2 = () => {
+  const dispatch =useDispatch();
+  const [popupform,setpopupform]=useState({})
+  let c=Cookies.get('token')
+  dispatch(addToken(c));
+  useEffect(() => {
+    console.log(c)
+    if(c!=null){
+      getdata();
+    }
+    console.log(popupform)
+     
+  
+    
+  }, [])
+  async function getdata() {
+  let res= await fetch("http://localhost:9000/users",{
+    method: "GET",
+    headers: {
+      "content-type": "application/json",
+      "authorization":`Bearer ${c}`
+    },
+   })
+   let data=await res.json();
+   setpopupform(data);
+  }
   return (
+    
     <div className="div2">
       <div className="menu1">
         <div>
@@ -336,11 +366,11 @@ const NavDiv2 = () => {
         <p className="navmenu3">Messages</p>
       </div>
       <div className="up">
-        <Link to={"/login"}>
+        
           <AccountCircleIcon
             style={{ backgroundColor: "none", color: "white" }}
           />
-        </Link>
+        
         <div className="menu3">
           <select className="optSign">
             <option className="UserName">Hi</option>
@@ -348,18 +378,21 @@ const NavDiv2 = () => {
 
           {/* <!-- dropdown list --> */}
 
-          <div className="signPop">
+          <div className="signPop" style={{height:c!=null?"500px":"200px"}}>
+            {c!=null?(
+            <div className="signpopmain">
+            {/* {c!=null? */}
             <div className="sig1">
-              <div style={{ fontSize: "medium" }}>
-                <p className="UserName2">gaurav</p>
+              <div style={{ fontSize: "20px" }}>
+                <p className="UserName2" style={{ fontSize: "20px" }}>Hi {popupform.name}</p>
               </div>
               <div className="ico">
-                <p className="UserNumb">verified</p>
+                <p className="UserNumb">{popupform.mobileno}  verified</p>
               </div>
-              <div>
+              <div style={{fontSize: "20px"}}>
                 <ModeIcon
                   style={{
-                    fontSize: "14px",
+                    fontSize: "20px",
                     marginLeft: "-15px",
                     marginRight: "8px",
                   }}
@@ -367,14 +400,15 @@ const NavDiv2 = () => {
                 View Profile
               </div>
             </div>
-            <hr />
+           
             <div className="profile">
               <p>
                 <HomeIcon
                   style={{
                     color: "grey",
-                    fontSize: "16px",
+                    fontSize: "18px",
                     marginRight: "8px",
+                    marginLeft:"-150px"
                   }}
                 />
                 <a href="#">Home</a>
@@ -385,6 +419,7 @@ const NavDiv2 = () => {
                     color: "grey",
                     fontSize: "16px",
                     marginRight: "8px",
+                    marginLeft:"-40px"
                   }}
                 />
                 <a href="#">Post Your Requirement</a>
@@ -395,6 +430,7 @@ const NavDiv2 = () => {
                     color: "grey",
                     fontSize: "16px",
                     marginRight: "8px",
+                    marginLeft:"-40px"
                   }}
                 />
                 <a href="#">Verified Business Buyer</a>
@@ -405,6 +441,7 @@ const NavDiv2 = () => {
                     color: "grey",
                     fontSize: "16px",
                     marginRight: "8px",
+                    marginLeft:"-10px"
                   }}
                 />
                 <a href="#">Products/Services Directory</a>
@@ -415,6 +452,7 @@ const NavDiv2 = () => {
                     color: "grey",
                     fontSize: "16px",
                     marginRight: "8px",
+                    marginLeft:"-120px"
                   }}
                 />
                 <a href="#">My Orders</a>
@@ -425,6 +463,7 @@ const NavDiv2 = () => {
                     color: "grey",
                     fontSize: "16px",
                     marginRight: "8px",
+                    marginLeft:"-90px"
                   }}
                 />
                 <a href="#">Recent Activity</a>
@@ -435,19 +474,21 @@ const NavDiv2 = () => {
                     color: "grey",
                     fontSize: "16px",
                     marginRight: "8px",
+                    marginLeft:"-130px"
                   }}
                 />
                 <a href="#">Settings</a>
               </p>
             </div>
-            <hr />
+           
             <div className="profile1">
               <p>
                 <SendToMobileIcon
                   style={{
                     color: "grey",
                     fontSize: "16px",
-                    marginTop: "-30px",
+                    marginTop: "-50px",
+                    marginLeft:"-80px"
                   }}
                 />
                 <a href="">Pay with IndiaMART</a>
@@ -459,20 +500,31 @@ const NavDiv2 = () => {
                 <MobileFriendlyIcon
                   style={{
                     color: "grey",
-                    fontSize: "16px",
+                    fontSize: "18px",
                     marginTop: "-30px",
+                    marginLeft:"-110px"
                   }}
                 />
                 <a href="">Download App</a>
               </p>
             </div>
-            <hr />
+           
             <div className="las">
-              <p>
+              <p style={{fontSize:"18px",marginLeft:"-20px"}}>
                 <a href="">Sign In as Different User</a>
               </p>
             </div>
-          </div>
+
+           </div>
+):(
+  <div className="signinpopupmain">
+    <h3 className="newuserhead">New User?</h3>
+    <Link to={"/login"}>
+    <button className="signinbutton">Signin</button>
+    </Link>
+  </div>
+)}
+        </div>
         </div>
       </div>
     </div>
