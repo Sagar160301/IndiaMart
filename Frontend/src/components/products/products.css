@@ -37,6 +37,7 @@ li,
   text-align: left;
   margin: 10px 0px;
 }
+
 .ulList {
   font-family: Arial;
   color: rgb(90, 56, 56);
@@ -47,6 +48,12 @@ li,
   cursor: pointer;
   text-align: center;
   text-align: left;
+}
+.singleProductDetailsGetLatestPriceL{
+  color: blue;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .singleProductDetailsGetLatestPrice:hover {
   color: rgb(193, 90, 90);

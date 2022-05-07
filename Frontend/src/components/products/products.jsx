@@ -214,11 +214,11 @@ export const Products = ({ products, type }) => {
           {products.map((e) => {
             return (
               <div className="ListickDiv">
-                <h2 className="singleProductDetailsHead">{e.name}</h2>
+                <h2 className="singleProductDetailsHeadL">{e.name}</h2>
                 <div className="LipsticImgDiv">
                   <img src={e.image} />
                 </div>
-                <h4 className="singleProductDetailsGetLatestPrice">
+                <h4 className="singleProductDetailsGetLatestPriceL">
                   Get Latest Price
                 </h4>
                 <button
