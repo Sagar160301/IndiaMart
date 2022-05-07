@@ -1,0 +1,74 @@
+.review {
+  background: url("../../images//indiamart_photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#Review {
+  width: 60%;
+  margin: 80px auto;
+
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.627) 0px 154px 155px,
+    rgba(0, 0, 0, 0.61) 0px -100px 300px, rgba(0, 0, 0, 0.566) 0px 4px 6px,
+    rgba(0, 0, 0, 0.581) 0px 12px 13px, rgba(17, 17, 17, 0.575) 0px -300px 50px;
+  height: 60vh;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#Review > div {
+  padding: 10px 0px;
+  border-bottom: 1px solid grey;
+}
+#Review #top > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Review #middle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#Review #middle #btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+#Review #middle #btn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid teal;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#Review #middle > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#homeButton {
+  border: 2px solid teal;
+  background: none;
+  color: teal;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  margin: 5px 0px;
+}
+#homeButton:hover {
+  background-color: teal;
+  color: white;
+}

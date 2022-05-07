@@ -20,6 +20,9 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
+.anchor {
+  text-align: center;
+}
 
 #HomeAbout > #details > div {
   display: flex;

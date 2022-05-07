@@ -1,5 +1,5 @@
-
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./cart.css";
 
 export const Card = () => {
@@ -70,7 +70,5 @@ export const Card = () => {
         </div>
       </div>
     </div>
-
- 
   );
 };

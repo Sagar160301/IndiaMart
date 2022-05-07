@@ -14,7 +14,7 @@ export const HomeAbout = () => {
         revolutionizing the Indian decorative <br /> cosmetics industry.
       </p>
       <Link to={"/aboutUs"}>
-        <h4>+ Read More</h4>
+        <h4 className="anchor">+ Read More</h4>
       </Link>
       <AboutOption />
     </div>
