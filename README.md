@@ -2,7 +2,7 @@
 
 ## Introduction :
 
-This project is the clone of india ecommerrce website called India mart. We team of six members buit this website as a part of construct week in Masai school.
+This project is the clone of india ecommerrce website called IndiaMart featureing Blue Heaven Cosmetics in this project. It has variety of products related to cosmetics like makeup, scrubs, lipsticks and many more realted to life style.
 
 ## Technologies :
 
@@ -15,6 +15,46 @@ This project is the clone of india ecommerrce website called India mart. We team
 • ExpressJS
 
 • MongoDB
+
+## Dependencies :
+
+### Frontend:
+
+• redux
+
+• react-redux
+
+• redux-thunk
+
+• react-router-dom
+
+• sytled-components
+
+• material-ui
+
+• material-ui/icons
+
+• framer-motion
+
+• js-cookie
+
+• emotion
+
+• react-owl-carousel
+
+### Backend:
+
+• express
+
+• mongoose
+
+• jsonwebtoken
+
+• cors
+
+• dotenv
+
+• bcrypt
 
 ## Features :
 
