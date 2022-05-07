@@ -10,7 +10,7 @@ export const SimilarProduct = () => {
 
   const getData = async () => {
     try {
-      let res = await fetch("http://localhost:9000/similarCategory");
+      let res = await fetch("https://sagarmart.herokuapp.com/similarCategory");
       let e = await res.json();
       setData(e);
     } catch (error) {

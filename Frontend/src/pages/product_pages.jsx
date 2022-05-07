@@ -13,7 +13,7 @@ export const Product_pages = () => {
   },[category]);
 
   const getData = async () => {
-    let res = await fetch(`http://localhost:9000/products/${category}`);
+    let res = await fetch(`https://sagarmart.herokuapp.com/products/${category}`);
     let FetchedData = await res.json();
     console.log(FetchedData)
     setData(FetchedData);
