@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { addCart } from "../../Redux/cart/action";
 import { useSelector } from "react-redux";
 import "./products.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 export const Products = ({ products, type }) => {
   const cart = useSelector((store) => store.cartReducer.cart);
   const token = useSelector((store) => store.cartReducer.token);
@@ -20,6 +20,7 @@ export const Products = ({ products, type }) => {
   })
   const [showcart, setshowcart] = useState(false)
   const dispatch = useDispatch();
+  const [addressform,setaddresform]=useState({})
   
   const handleinputcart=(e)=>{
     const { name, value } = e.target;
@@ -66,6 +67,28 @@ export const Products = ({ products, type }) => {
     
     
   };
+
+  useEffect(() => {
+    console.log(token)
+    if(token!=null){
+      getdata();
+    }
+    console.log(addressform)
+     
+  
+    
+  }, [])
+  async function getdata() {
+  let res= await fetch("http://localhost:9000/users",{
+    method: "GET",
+    headers: {
+      "content-type": "application/json",
+      "authorization":`Bearer ${token}`
+    },
+   })
+   let data=await res.json();
+   setaddresform(data);
+  }
   // console.log(products, type);
   
   return (
@@ -118,6 +141,12 @@ export const Products = ({ products, type }) => {
                 <img src={cart.image} alt="" />
                 <h1 className="formData">{cart.name}</h1>
                 <p className="formData">{cart.benefits}</p>
+                <div className="displayaddress">
+                  <p>Address</p>
+                  <p>{addressform.houseno} {addressform.city}{addressform.pincode} </p>
+                  <p>{addressform.email}</p>
+                  <p>{addressform.mobileno}</p>
+                </div>
               </div>
               <div id="right">
                 <form action="" onSubmit={handleSubmit}>
@@ -211,6 +240,12 @@ export const Products = ({ products, type }) => {
                 <img src={cart.image} alt="" />
                 <h1 className="formData">{cart.name}</h1>
                 <p className="formData">{cart.benefits}</p>
+                <div className="displayaddress">
+                  <p>Address</p>
+                  <p>{addressform.houseno} {addressform.city}{addressform.pincode} </p>
+                  <p>{addressform.email}</p>
+                  <p>{addressform.mobileno}</p>
+                </div>
               </div>
               <div id="right">
                 <form action="" onSubmit={handleSubmit}>
