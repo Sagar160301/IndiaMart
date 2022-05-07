@@ -2,8 +2,11 @@ import "./pages_sidebar.css"
 import { useState } from "react"
 import  up from "./up.png"
 import down from "./down.png"
+import { useNavigate } from "react-router-dom";
 export const Sidebar=()=>{
     const [sidebar,setSidebar]=useState({ Makeup:false,Lipstick:false,LipsProducts:false,BleachCream:false,Scrubs:false,EyesProducts:false,LipCare:false,TraditionalItems:false})
+    const navigate = useNavigate();
+    
     const updateSidebar=(data)=>{
       setSidebar({
             ...sidebar,
@@ -16,64 +19,64 @@ return <div className="sidebarDiv">
             <div  id="Makeup" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
                 <div className="sidebarDivs">
                     <div>
-                         <p className="sidebarPageHead">Makeup</p> 
-                         {sidebar.Makeup===false ? <p className="sidebarAvailable">4 products available</p>:null}
+                         <p onClick={()=>navigate("/product/Makeup")} className="sidebarPageHead">Makeup</p> 
+                         {sidebar.Makeup===false ? <p onClick={()=>navigate("/product/Makeup")} className="sidebarAvailable">4 products available</p>:null}
                    </div> 
                      {sidebar.Makeup===true ? <img id="Makeup"  className="selectImg" src={up}/>:<img id="Makeup" className="selectImg" src={down}/>}
                </div>
                      {sidebar.Makeup===true ? <div className="categoryDiv">
-                                               <p>Foundation</p>
-                                               <p>Compact</p>
-                                               <p>Pan Cake Foundation</p>
-                                               <p>Pan Stick Foundation</p>
+                                               <p onClick={()=>navigate("/product/makeup")}>Foundation</p>
+                                               <p onClick={()=>navigate("/product/makeup")}>Compact</p>
+                                               <p onClick={()=>navigate("/product/makeup")}>Pan Cake Foundation</p>
+                                               <p onClick={()=>navigate("/product/makeup")}>Pan Stick Foundation</p>
                                     </div>:null}
           </div>
           <div  id="Lipstick" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
                <div className="sidebarDivs">
                   <div>
-                          <p className="sidebarPageHead">Lipstick</p> 
-                          {sidebar.Lipstick===false ?<p className="sidebarAvailable">9 products available</p>:null}
+                          <p onClick={()=>navigate("/product/lipstick")} className="sidebarPageHead">Lipstick</p> 
+                          {sidebar.Lipstick===false ?<p onClick={()=>navigate("/product/lipstick")} className="sidebarAvailable">9 products available</p>:null}
                   </div> 
                       {sidebar.Lipstick===true ? <img id="Lipstick"  className="selectImg" src={up}/>:<img id="Lipstick" className="selectImg" src={down}/>}
                </div>
                      {sidebar.Lipstick===true ? <div className="categoryDiv">
-                                            <p>Cerise Pink Lipstick</p>
-                                            <p>Coral Red Lipstick</p>
-                                            <p>Desert Rose Lipstick</p>
-                                            <p>Eternal Red Lipstick</p>
-                                            <p> Muddy Pink Lipstick</p>
-                                            <p>Pretty Purple Lipstick</p>
-                                            <p>Radient Red Lipstick</p>
-                                            <p>Baked Brick Lipstick</p> 
+                                            <p onClick={()=>navigate("/product/lipstick")}>Cerise Pink Lipstick</p>
+                                            <p onClick={()=>navigate("/product/lipstick")}>Coral Red Lipstick</p>
+                                            <p onClick={()=>navigate("/product/lipstick")}>Desert Rose Lipstick</p>
+                                            <p onClick={()=>navigate("/product/lipstick")}>Eternal Red Lipstick</p>
+                                            <p onClick={()=>navigate("/product/lipstick")}> Muddy Pink Lipstick</p>
+                                            <p onClick={()=>navigate("/product/lipstick")}>Pretty Purple Lipstick</p>
+                                            <p onClick={()=>navigate("/product/lipstick")}>Radient Red Lipstick</p>
+                                            <p onClick={()=>navigate("/product/lipstick")}>Baked Brick Lipstick</p> 
                                             </div>:null}
             </div>
         <div  id="LipsProducts" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
             <div className="sidebarDivs">
             <div>
-                <p className="sidebarPageHead">Lips Products</p> 
-                {sidebar.LipsProducts===false ?<p className="sidebarAvailable">3 products available</p>:null}
+                <p onClick={()=>navigate("/product/lips-products")} className="sidebarPageHead">Lips Products</p> 
+                {sidebar.LipsProducts===false ?<p onClick={()=>navigate("/product/lips-products")} className="sidebarAvailable">3 products available</p>:null}
             </div> 
             {sidebar.LipsProducts===true ? <img id="LipsProducts"  className="selectImg" src={up}/>:<img id="LipsProducts" className="selectImg" src={down}/>}
             </div>
             {sidebar.LipsProducts===true ? <div className="categoryDiv">
-            <p>Lip Gloss</p>
-            <p>Lip Stick</p>
-            <p>Lip Liner</p>
+            <p onClick={()=>navigate("/product/lips-products")}>Lip Gloss</p>
+            <p onClick={()=>navigate("/product/lips-products")}>Lip Stick</p>
+            <p onClick={()=>navigate("/product/lips-products")}>Lip Liner</p>
         </div>:null}
             </div>
        
             <div  id="BleachCream" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
             <div className="sidebarDivs">
             <div>
-                <p className="sidebarPageHead">Bleach Cream</p> 
-                {sidebar.BleachCream===false ?<p className="sidebarAvailable">3 products available</p>:null}
+                <p onClick={()=>navigate("/product/bleach-cream")} className="sidebarPageHead">Bleach Cream</p> 
+                {sidebar.BleachCream===false ?<p onClick={()=>navigate("/product/bleach-cream")} className="sidebarAvailable">3 products available</p>:null}
             </div> 
             {sidebar.BleachCream===true ? <img id="BleachCream"  className="selectImg" src={up}/>:<img id="BleachCream" className="selectImg" src={down}/>}
             </div>
             {sidebar.BleachCream===true ? <div className="categoryDiv">
-            <p>Fruit Bleach</p>
-            <p>Gold Bleach</p>
-            <p>Personal Bleach</p>
+            <p onClick={()=>navigate("/product/bleach-cream")}>Fruit Bleach</p>
+            <p onClick={()=>navigate("/product/bleach-cream")}>Gold Bleach</p>
+            <p onClick={()=>navigate("/product/bleach-cream")}>Personal Bleach</p>
         </div>:null}
             </div>
        

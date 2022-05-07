@@ -17,6 +17,6 @@ export const Producthead = ({ productData, type }) => {
         })}
       </div>
     </div>
-    // <>sagar</>
+    
   );
 };
