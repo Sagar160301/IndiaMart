@@ -16,7 +16,7 @@ export const Carousel = () => {
     try {
       let res = await fetch("https://sagarmart.herokuapp.com/proudctService");
       let allData = await res.json();
-      
+      console.log(allData)
       setData(allData);
     } catch (error) {
       console.log(error);
