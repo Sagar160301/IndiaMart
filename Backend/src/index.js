@@ -36,7 +36,12 @@ app.post("/register", register); //for creating new user
 
 app.post("/login", login); // for login into the website
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+
 connectDB();
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`http://localhost:${port}`);
 });

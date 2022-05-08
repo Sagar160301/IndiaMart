@@ -83,58 +83,58 @@ return <div className="sidebarDiv">
             <div  id="Scrubs" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
             <div className="sidebarDivs">
             <div>
-                <p className="sidebarPageHead">Scrubs</p> 
+                <p onClick={()=>navigate("/product/scrubs")} className="sidebarPageHead">Scrubs</p> 
                {sidebar.Scrubs===false ? <p className="sidebarAvailable">3 products available</p>:null}
             </div> 
             {sidebar.Scrubs===true ? <img id="Scrubs"  className="selectImg" src={up}/>:<img id="Scrubs" className="selectImg" src={down}/>}
             </div>
             {sidebar.Scrubs===true ? <div className="categoryDiv">
-            <p>Fairness Scrub</p>
-            <p>Mix Fruit Scrub</p>
-            <p>Facial Scrub-Walnut & Apricot</p>
+            <p onClick={()=>navigate("/product/scrubs")} >Fairness Scrub</p>
+            <p onClick={()=>navigate("/product/scrubs")} >Mix Fruit Scrub</p>
+            <p onClick={()=>navigate("/product/scrubs")} >Facial Scrub-Walnut & Apricot</p>
         </div>:null}
             </div>
        
             <div  id="EyesProducts" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
             <div className="sidebarDivs">
             <div>
-                <p className="sidebarPageHead">Eyes Products</p> 
+                <p onClick={()=>navigate("/product/eyes-products")}  className="sidebarPageHead">Eyes Products</p> 
                 {sidebar.EyesProducts===false ? <p className="sidebarAvailable">3 products available</p>:null}
             </div> 
             {sidebar.EyesProducts===true ? <img id="EyesProducts"  className="selectImg" src={up}/>:<img id="EyesProducts" className="selectImg" src={down}/>}
             </div>
             {sidebar.EyesProducts===true ? <div className="categoryDiv">
-           <p>Mascara</p>
-           <p>Eye Shadow</p>
-           <p>Eye Liner</p>
+           <p onClick={()=>navigate("/product/eyes-products")}>Mascara</p>
+           <p onClick={()=>navigate("/product/eyes-products")}>Eye Shadow</p>
+           <p onClick={()=>navigate("/product/eyes-products")}>Eye Liner</p>
         </div>:null}
             </div>
 
             <div  id="LipCare" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
             <div className="sidebarDivs">
             <div>
-                <p className="sidebarPageHead">LipCare</p> 
+                <p onClick={()=>navigate("/product/lipcare")} className="sidebarPageHead">LipCare</p> 
                 {sidebar.LipCare===false ? <p className="sidebarAvailable">2 products available</p>:null}
             </div> 
             {sidebar.LipCare===true ? <img id="LipCare"  className="selectImg" src={up}/>:<img id="LipCare" className="selectImg" src={down}/>}
             </div>
             {sidebar.LipCare===true ? <div className="categoryDiv">
-            <p>Lip Balm</p>
-            <p>Lip Gaurd</p>
+            <p onClick={()=>navigate("/product/lipcare")}>Lip Balm</p>
+            <p onClick={()=>navigate("/product/lipcare")}>Lip Gaurd</p>
         </div>:null}
             </div>
 
             <div  id="TraditionalItems" className="categorysMainDiv"  onClick={(e)=>updateSidebar(e.target)}>
             <div className="sidebarDivs">
             <div>
-                <p className="sidebarPageHead">  Traditional Items</p> 
+                <p onClick={()=>navigate("/product/traditional-items")} className="sidebarPageHead">  Traditional Items</p> 
                {sidebar.TraditionalItems===false ? <p className="sidebarAvailable">2 products available</p>:null}
             </div> 
             {sidebar.TraditionalItems===true ? <img id="TraditionalItems"  className="selectImg" src={up}/>:<img id="TraditionalItems" className="selectImg" src={down}/>}
             </div>
             {sidebar.TraditionalItems===true ? <div className="categoryDiv">
-            <p>Sindoor</p>
-            <p>Kajal</p>
+            <p  onClick={()=>navigate("/product/traditional-items")}>Sindoor</p>
+            <p  onClick={()=>navigate("/product/traditional-items")}>Kajal</p>
         </div>:null}
             </div>
           
