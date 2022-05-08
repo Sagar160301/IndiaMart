@@ -5,9 +5,12 @@ import { useSelector } from "react-redux";
 import "./products.css";
 import thankimg from "../../images/thankyou_image.jpg"
 import { useState,useEffect } from "react";
+import Cookies from 'js-cookie'
 export const Products = ({ products, type }) => {
+  let c=Cookies.get('token')
   const cart = useSelector((store) => store.cartReducer.cart);
   const token = useSelector((store) => store.cartReducer.token);
+  const navigate=useNavigate();
   const [carterr,setcarterr]=useState(false)
   const [displaythank,setthank]=useState(false)
   const [cartform,setcartform]=useState({
@@ -44,7 +47,7 @@ export const Products = ({ products, type }) => {
         return;
       }
     }
-    
+    if(c){
       let res = await fetch("https://sagarmart.herokuapp.com/booking", {
         method: "POST",
         headers: {
@@ -67,6 +70,12 @@ export const Products = ({ products, type }) => {
         setthank(true);
         return;
       }
+    }
+    else{
+navigate("/login")
+    }
+    
+     
     
     
   };
@@ -126,7 +135,14 @@ export const Products = ({ products, type }) => {
                     className="singleProductDetailsButton"
                     onClick={() => {
                       dispatch(addCart(e));
-                      setshowcart(true)
+                        if(c){
+                          setshowcart(true)
+                        }
+                        else{
+                          navigate("/login")
+                        }
+                     
+                      
                       // navigate("/cartPage");
                     }}
                   >
@@ -220,8 +236,7 @@ export const Products = ({ products, type }) => {
                   style={{ display: setcarterr ? "flex" : "none" }}
                 >
                   <span>
-                    *Please enter correct mobile number or mobile number not
-                    exist
+                   
                   </span>
                 </div>
                   <input type="submit" id="submit" value="Submit" />
@@ -273,7 +288,13 @@ export const Products = ({ products, type }) => {
                   className="singleProductDetailsButton"
                   onClick={() => {
                     dispatch(addCart(e));
-                    setshowcart(true)
+                    console.log("c",c)
+                    if(c){
+                      setshowcart(true)
+                    }
+                    else{
+                      navigate("/login")
+                    }
                     // navigate("/cartPage");
                   }}
                 >
@@ -366,8 +387,7 @@ export const Products = ({ products, type }) => {
                   style={{ display: setcarterr ? "flex" : "none" }}
                 >
                   <span>
-                    *Please enter correct mobile number or mobile number not
-                    exist
+                   
                   </span>
                 </div>
                   <input type="submit" id="submit" value="Submit" />
