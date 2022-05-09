@@ -3,7 +3,11 @@
 ## Introduction :
 
 This project is the clone of india ecommerrce website called IndiaMart featureing Blue Heaven Cosmetics in this project. It has variety of products related to cosmetics like makeup, scrubs, lipsticks and many more realted to life style.
+
+
 [Deploy Link](https://heroic-zabaione-a1a115.netlify.app/)
+
+
 [Blog Link](https://medium.com/@chiramanasrikanth265/cloning-the-india-mart-website-using-mern-stack-2128484a3964)
 
 ## Technologies :
